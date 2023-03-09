@@ -66,7 +66,7 @@ int kmpCompare(const string &dst, const string &target) {
             j++;
             continue;
         }
-        j -= next[j];
+        j = next[j];
     }
     return cnt;
 }
