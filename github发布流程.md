@@ -1,4 +1,5 @@
 #! https://zhuanlan.zhihu.com/p/606857354
+
 # github发布流程
 
 ## 0.解决上不去或者访问慢
@@ -151,3 +152,5 @@ git branch --set-upstream-to origin/新分支名称
 4. 切换回要merge的分支
 
    
+如何正确显示中文文件名：
+git config --global core.quotepath false
