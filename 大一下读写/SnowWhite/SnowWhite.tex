@@ -2,9 +2,10 @@
 % \usepackage{ctex}
 % \usetheme{Madrid}
 \usetheme{Warsaw}
-\definecolor{myteal}{cmyk}{0.09,0.63,0,0.41}
+\definecolor{myteal}{cmyk}{0.10,0.63,0,0.41}
 \usecolortheme[named=myteal]{structure}
-\title[About Snow White and Cinderella]
+% \usecolortheme{lily}
+\title[Reflection on Snow White and Cinderella]
 {Snow White and Cinderella}
 \subtitle{two fairy tales}
 \author[Eric, Richard] % (optional, for multiple authors)
@@ -29,6 +30,15 @@ Nanjing University
 \setbeamerfont{title}{series=\bfseries}
 \renewcommand{\familydefault}{\rmdefault} %可选择\rmdefault \sfdefault \ttdefault 分别是罗马字体，sans-serif字体和等宽字体  \familydefault是默认字体
 
+\AtBeginSection[]
+{
+	\begin{frame}{Catalogue}
+		\transfade%淡入淡出效果
+		\tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]
+		\addtocounter{framenumber}{-1}  %目录页不计算页码
+	\end{frame}
+}
+
 \begin{document}
 
 \frame{\titlepage}
@@ -41,20 +51,20 @@ Nanjing University
 \section{Background Introduction}
 \begin{frame}
     \frametitle{The Green Brothers}
-    \begin{block}{The Green Brothers}
-        \begin{itemize}
-            \item<1-> Name: Jacob and Wilhelm
-            \item<2-> Nationality: German
-            \item<3-> Born in 1785 and 1786
-            \item<4-> Titles:
-                  \begin{itemize}
-                      \item Poets
-                      \item Historians
-                      \item Linguistics
-                      \item \alert{Tales Collectors}
-                  \end{itemize}
-        \end{itemize}
-    \end{block}
+    % \begin{block}{The Green Brothers}
+    \begin{itemize}
+        \item<1-> Name: Jacob and Wilhelm
+        \item<2-> Nationality: German
+        \item<3-> Born in 1785 and 1786
+        \item<4-> Titles:
+            \begin{itemize}
+                \item Poets
+                \item Historians
+                \item Linguistics
+                \item \alert{Tales Collectors}
+            \end{itemize}
+    \end{itemize}
+    % \end{block}
 \end{frame}
 
 \begin{frame}
@@ -66,7 +76,7 @@ Nanjing University
             \item<3-> 1822: the third edition %(the Snow White and Cinderella added)
         \end{itemize}
     \end{block}
-    \begin{block}{Master Piecies}
+    \begin{block}<4->{Master Piecies}
         \begin{itemize}
             \item<5-> \alert{The Snow White}
             \item<5-> \alert{The Cinderella}
@@ -77,33 +87,107 @@ Nanjing University
     \end{block}
 \end{frame}
 
-\section{First section}
+\section{Content Analysis}
 
 \begin{frame}
-    \frametitle{Sample frame title}
-    This is some text in the first frame. This is some text in the first frame. This is some text in the first frame.
+    \frametitle{Content Analysis}
+    \begin{block}{Domestic}
+        \begin{itemize}
+            \item Content
+            \item Status
+                  \begin{itemize}
+                      \item Wife
+                      \item Mother
+                      \item Babysitter
+                  \end{itemize}
+            \item Good at housework
+        \end{itemize}
+    \end{block}
 \end{frame}
 
-\section{Second section}
+\begin{frame}
+    \frametitle{Content Analysis}
+    \begin{block}{Innocent}
+        \begin{itemize}
+            \item Content
+            \item Kind and warm-hearted
+            \item Simple and even stupid
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\section{Theme \& implication}
+\begin{frame}
+    \frametitle{What snow white and Cinderella tells us?}
+    \begin{block}{Reflections}
+        \begin{itemize}
+            \item Virtues
+                  \begin{itemize}
+                      \item tender$\&$polite
+                      \item Kindhearted
+                  \end{itemize}
+            \item Vices
+                  \begin{itemize}
+                      \item selfish$\&$merciless
+                      \item Fractious
+                  \end{itemize}
+        \end{itemize}
+    \end{block}
+\end{frame}
 
 \begin{frame}
-    \frametitle{Highlighting text}
-
-    In this slide, some important text will be
-    \alert{highlighted} because it's important.
-    Please, don't abuse it.
-
-    \begin{block}{Remark}
-        Sample text
+    \frametitle{Reflections}
+    \begin{block}{For Adults?}
+        \begin{itemize}
+            \item Vicarious feeling
+            \item Negative teaching material
+        \end{itemize}
     \end{block}
+\end{frame}
 
-    \begin{alertblock}{Important theorem}
-        Sample text in red box
-    \end{alertblock}
+\begin{frame}
+    \frametitle{Reflections}
+    \begin{block}{For Children?}
+        \begin{itemize}
+            \item Words$\&$structure
+            \item Imagination$\&$creativity
+            \item Value$\&$education
+        \end{itemize}
+    \end{block}
+\end{frame}
 
-    \begin{examples}
-        Sample text in green box. The title of the block is ``Examples''.
-    \end{examples}
+
+\begin{frame}
+    \Huge{\centerline{Thank you!}}
 \end{frame}
 
 \end{document}
+
+% \section{First section}
+
+% \begin{frame}
+%     \frametitle{Sample frame title}
+%     This is some text in the first frame. This is some text in the first frame. This is some text in the first frame.
+% \end{frame}
+
+% \section{Second section}
+
+% \begin{frame}
+%     \frametitle{Highlighting text}
+
+%     In this slide, some important text will be
+%     \alert{highlighted} because it's important.
+%     Please, don't abuse it.
+
+%     \begin{block}{Remark}
+%         Sample text
+%     \end{block}
+
+%     \begin{alertblock}{Important theorem}
+%         Sample text in red box
+%     \end{alertblock}
+
+%     \begin{examples}
+%         Sample text in green box. The title of the block is ``Examples''.
+%     \end{examples}
+% \end{frame}

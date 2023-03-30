@@ -29,6 +29,14 @@ Very Famous University
 \setbeamerfont{title}{series=\bfseries}
 \renewcommand{\familydefault}{\rmdefault} %可选择\rmdefault \sfdefault \ttdefault 分别是罗马字体，sans-serif字体和等宽字体  \familydefault是默认字体
 
+\AtBeginSection[]
+{
+	\begin{frame}{Catalogue}
+		\transfade%淡入淡出效果
+		\tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]
+		\addtocounter{framenumber}{-1}  %目录页不计算页码
+	\end{frame}
+}
 
 \begin{document}
 \frame{\titlepage}
@@ -65,6 +73,10 @@ Very Famous University
     \begin{examples}
         Sample text in green box. The title of the block is ``Examples''.
     \end{examples}
+\end{frame}
+
+\begin{frame}
+\Huge{\centerline{Thank you!}}
 \end{frame}
 
 \end{document}
