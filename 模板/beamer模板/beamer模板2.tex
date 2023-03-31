@@ -1,0 +1,82 @@
+\documentclass{beamer}
+\usepackage{ctex}
+% \usetheme{Madrid}
+\usetheme{Warsaw}
+\definecolor{myteal}{cmyk}{0.09,0.63,0,0.51}
+\usecolortheme[named=myteal]{structure}
+\title[About Beamer]
+{About the Beamer class in presentation making}
+\subtitle{A short story}
+\author[Arthur, Doe] % (optional, for multiple authors)
+{A.~B.~Arthur\inst{1} \and J.~Doe\inst{2}}
+\institute[NJU] % (optional)
+{
+\inst{1}%
+Faculty of Physics\\
+Very Famous University
+\and
+\inst{2}%
+Faculty of Chemistry\\
+Very Famous University
+}
+\date[ICLR 2023] % (optional)
+{\today}
+
+% \logo{\includegraphics[height=0.8cm]{logo_NJU}}
+
+\definecolor{NJUblue}{cmyk}{0.09,0.63,0,0.51}
+\setbeamercolor{titlelike}{bg=NJUblue}
+\setbeamerfont{title}{series=\bfseries}
+\renewcommand{\familydefault}{\rmdefault} %可选择\rmdefault \sfdefault \ttdefault 分别是罗马字体，sans-serif字体和等宽字体  \familydefault是默认字体
+
+\AtBeginSection[]
+{
+	\begin{frame}{Catalogue}
+		\transfade%淡入淡出效果
+		\tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]
+		\addtocounter{framenumber}{-1}  %目录页不计算页码
+	\end{frame}
+}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents
+\end{frame}
+
+\section{First section}
+
+\begin{frame}
+    \frametitle{Sample frame title}
+    This is some text in the first frame. This is some text in the first frame. This is some text in the first frame.
+\end{frame}
+
+\section{Second section}
+
+\begin{frame}
+    \frametitle{Highlighting text}
+
+    In this slide, some important text will be
+    \alert{highlighted} because it's important.
+    Please, don't abuse it.
+
+    \begin{block}{Remark}
+        Sample text
+    \end{block}
+
+    \begin{alertblock}{Important theorem}
+        Sample text in red box
+    \end{alertblock}
+
+    \begin{examples}
+        Sample text in green box. The title of the block is ``Examples''.
+    \end{examples}
+\end{frame}
+
+\begin{frame}
+\Huge{\centerline{Thank you!}}
+\end{frame}
+
+\end{document}
