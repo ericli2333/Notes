@@ -1,10 +1,12 @@
 \documentclass{beamer}
-% \usepackage{ctex}
-% \usetheme{Madrid}
-\usetheme{Warsaw}
-\definecolor{myteal}{cmyk}{0.10,0.63,0,0.41}
-\usecolortheme[named=myteal]{structure}
-% \usecolortheme{lily}
+% \usepackage{ctex, hyperref}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+
+% other packages
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+
 \title[Reflection on Snow White and Cinderella]
 {Snow White and Cinderella}
 \subtitle{two fairy tales}
@@ -22,30 +24,43 @@
 }
 \date[NJU 2023] % (optional)
 {\today}
+\usepackage{NJU}
 
-\logo{\includegraphics[height=0.8cm]{image/logo_NJU.png}}
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
 
-\definecolor{NJUblue}{cmyk}{0.10,0.63,0,0.41}
-\setbeamercolor{titlelike}{bg=NJUblue}
-\setbeamerfont{title}{series=\bfseries}
-\renewcommand{\familydefault}{\rmdefault} %可选择\rmdefault \sfdefault \ttdefault 分别是罗马字体，sans-serif字体和等宽字体  \familydefault是默认字体
-
-\AtBeginSection[]
-{
-    \begin{frame}{Catalogue}
-        \transfade%淡入淡出效果
-        \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]
-        \addtocounter{framenumber}{-1}  %目录页不计算页码
-    \end{frame}
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
 }
+
+\renewcommand{\familydefault}{\rmdefault} %可选择\rmdefault \sfdefault \ttdefault 分别是罗马字体，sans-serif字体和等宽字体  \familydefault是默认字体
 
 \begin{document}
 
-\frame{\titlepage}
+% \kaishu
+\begin{frame}
+    \titlepage
+    \begin{figure}[htpb]
+        \begin{center}
+            \includegraphics[width=0.2\linewidth]{pic/NJU_Logo.eps}
+        \end{center}
+    \end{figure}
+\end{frame}
 
 \begin{frame}
-    \frametitle{Table of Contents}
-    \tableofcontents
+    \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
 \end{frame}
 
 \section{Background Introduction}
@@ -64,7 +79,10 @@
                 \item \alert{Tales Collectors}
             \end{itemize}
     \end{itemize}
-    % \end{block} \end{frame} \begin{frame}
+    % \end{block}
+\end{frame}
+
+\begin{frame}
     \frametitle{Master Piecies}
     \begin{block}{Important time points of the Grimm's Fairy Tales}
         \begin{itemize}
@@ -87,7 +105,7 @@
 \section{Content Analysis}
 
 \begin{frame}
-    \frametitle{Similarity \& Difference}
+    \frametitle{Q1: Similarity \& Difference}
     \begin{block}<1->{Similarity}
         \begin{itemize}
             \item Beautiful \& Optimistic
@@ -105,12 +123,12 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Implication}
+    \frametitle{Q1: Implication}
     \huge{Attitude + Change $\rightarrow$ ``Success''}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Content Analysis}
+    \frametitle{Q2: Content Analysis}
     \begin{block}{Domestic}
         \begin{itemize}
             \item Content
@@ -126,7 +144,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Content Analysis}
+    \frametitle{Q2: Content Analysis}
     \begin{block}{Innocent}
         \begin{itemize}
             \item Content
@@ -136,6 +154,33 @@
     \end{block}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Q3: Absent of father}
+    \onslide<1->
+    \begin{itemize}
+        \item Female: Low social status
+        \item Male: Strong government
+    \end{itemize}
+    \onslide<2->
+    \huge{\alert{Results: No men recorded acting viciously}}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Q3: Example of Metaohor}
+    \begin{block}{Metaphor}
+        Thing A is thing B
+    \end{block}
+
+
+    \begin{block}{Simile}
+        Thing A is like thing B
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Q3: Snow White}
+    \Huge{The poisonous apple was white with red cheek}
+\end{frame}
 
 \section{Theme \& Implication}
 \begin{frame}
@@ -177,37 +222,19 @@
     \end{block}
 \end{frame}
 
+\section{References}
+
+\begin{frame}[allowframebreaks]
+    \bibliography{ref}
+    \bibliographystyle{alpha}
+    % 如果参考文献太多的话，可以像下面这样调整字体：
+    % \tiny\bibliographystyle{alpha}
+\end{frame}
+
 \begin{frame}
-    \Huge{\centerline{Thank you!}} 
+    \begin{center}
+        {\Huge\calligra Thanks!}\cite{origin}
+    \end{center}
 \end{frame}
 
 \end{document}
-
-% \section{First section}
-
-% \begin{frame}
-%     \frametitle{Sample frame title}
-%     This is some text in the first frame. This is some text in the first frame. This is some text in the first frame.
-% \end{frame}
-
-% \section{Second section}
-
-% \begin{frame}
-%     \frametitle{Highlighting text}
-
-%     In this slide, some important text will be
-%     \alert{highlighted} because it's important.
-%     Please, don't abuse it.
-
-%     \begin{block}{Remark}
-%         Sample text
-%     \end{block}
-
-%     \begin{alertblock}{Important theorem}
-%         Sample text in red box
-%     \end{alertblock}
-
-%     \begin{examples}
-%         Sample text in green box. The title of the block is ``Examples''.
-%     \end{examples}
-% \end{frame}
