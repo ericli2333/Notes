@@ -1,0 +1,141 @@
+\documentclass{beamer}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+
+% other packages
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+\usepackage{multicol}
+
+\title[Reflection on ChatGPT]
+{Mid Term Report}
+\subtitle{ChatGPT and Academic Integrity}
+\author[Eric] % (optional, for multiple authors)
+{Li Guanlin\inst{1} \and He Lingrui\inst{1} \and Yan Yuheng \inst{1} \and Li Jiazhou \inst{1}}
+\institute[NJU] % (optional)
+{
+\inst{1}%
+Undergraduates in ICS\\
+Nanjing University
+\and
+% \inst{2}%
+% Faculty of Chemistry\\
+% Very Famous University
+}
+\date[NJU 2023] % (optional)
+{\today}
+\usepackage{NJU}
+
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+}
+
+\renewcommand{\familydefault}{\rmdefault} %可选择\rmdefault \sfdefault \ttdefault 分别是罗马字体，sans-serif字体和等宽字体  \familydefault是默认字体
+
+\begin{document}
+\begin{frame}
+    \titlepage
+    \begin{figure}[htpb]
+        \begin{center}
+            \includegraphics[width=0.2\linewidth]{pic/NJU_Logo.eps}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+    \frametitle{Introduction}
+    \Large
+    \begin{itemize}
+        \item Purpose: \textbf{ChatGPT and Academic Integrity.}
+        \item Questions: Reasoning and Non-trivial Questions.
+              %The capability of ChatGPT in demonstrating its reasoning and answering non-trivial questions.
+        \item Siginificance: \alert{The Unprecedented Threat.}%Raising an alerm about the unprecedented threat.
+    \end{itemize}
+\end{frame}
+
+\section{Methods}
+
+\begin{frame}
+    \frametitle{Methods}
+    \Large
+    \begin{block}{Design}
+        Steps:
+
+        \begin{enumerate}
+            \item<1-> ChatGPT generate a critical thinking question
+            \item<2-> ChatGPT answer the questions itself
+            \item<3-> ChatGPT critically evaluate the answer
+        \end{enumerate}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Evaluation}
+    \onslide<1->
+    \Large{Standard: Universal intellectual standards}
+    \onslide<2->
+    \begin{block}{Dimesion}
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item Relevance
+                \item Clarity
+                \item Accuracy
+                \item Precision
+                \item Depth
+                \item Breadth
+                \item Logic
+                \item Persuasiveness
+                \item Originality
+            \end{itemize}
+        \end{multicols}
+    \end{block}
+
+\end{frame}
+
+\section{Results}
+\begin{frame}
+    \frametitle{Results}
+\end{frame}
+
+\section{Discussion}
+\begin{frame}
+    \frametitle{Discussion}
+\end{frame}
+
+\section{Reference}
+
+\begin{frame}[allowframebreaks]
+    \bibliography{ref}
+    \bibliographystyle{alpha}
+    % 如果参考文献太多的话，可以像下面这样调整字体：
+    % \tiny\bibliographystyle{alpha}
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        {\Huge\calligra Thanks!}\cite{origin}
+    \end{center}
+\end{frame}
+
+\end{document}

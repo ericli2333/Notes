@@ -1,0 +1,17 @@
+@article{timmons2005career,
+  title     = {Career Planning Begins with Assessment (NCSET Teleconference)},
+  author    = {Timmons, Joe and Podmostko, Mary},
+  year      = {2005},
+  publisher = {University of Minnesota, Institute on Community Integration, National Center~…},
+  url       = {https://conservancy.umn.edu/bitstream/handle/11299/173356/2005_10.pdf;sequence=1}
+}
+
+[1] Lam WY, Su R K L, Pam H J. Experimental study of plate-reinforced composite deep coupling beams[J]. Structural Design Tall Special Building, 2009(18)：235-257. 
+[序号]主要责任者.文献题名[J].刊名，年（期）：起止页码. 
+
+[1] Folsom, Byron and Peterson, Gary W and Reardon, Robert C and Mann, Barbara A.Impact of a career planning course on academic performance and graduation rate[J]. Journal of College Student Retention: Research, Theory and Practice,2005(6):461-473
+[2] Negru-Subtirica, Oana and Pop, Eleonora Ioana.Longitudinal links between career adaptability and academic achievement in adolescence[J].Journal of Vocational Behavior,2016(93):163-170
+[3] Lent, Robert W and Brown, Steven D and Larkin, Kevin C.Self-efficacy in the prediction of academic performance and perceived career options[J].Journal of counseling psychology,1986(33):265
+[4] JONES, SHIRLEY MAXWELL.The impact of a career planning workshop on freshman student participants on short-term retention, first semester grade point average and questionnaire responses[J].Mississippi State University,(1983)
+[5] Sapra, Jayashree and Chaudhary, Mona and Jeswal, Ruchika.A study on career aspirations and its relationship with the academic performance of undergraduate management students: are they realistic?[J].International Journal of Education Economics and Development,2021(12):253--266
+[6] Timmons, Joe and Podmostko, Mary.Career Planning Begins with Assessment (NCSET Teleconference)[J].University of Minnesota, Institute on Community Integration, National Center~…,2005
