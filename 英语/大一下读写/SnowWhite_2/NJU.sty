@@ -72,11 +72,13 @@
 \setbeamercolor{subsection in sidebar shaded}{fg=grey}
 \AtBeginSection[]{
 	\begin{frame}
+    \frametitle{\begin{center}\Huge{Section  \Roman{section}}\end{center}}
 		\tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
 	\end{frame}
 }
 \AtBeginSubsection[]{
 	\begin{frame}
+    \frametitle{\begin{center}\Huge{Subsection \Roman{subsection}}\end{center}}
 		\tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
 	\end{frame}
 }
