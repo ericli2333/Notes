@@ -152,5 +152,21 @@ git branch --set-upstream-to origin/新分支名称
 4. 切换回要merge的分支
 
    
+
 如何正确显示中文文件名：
 git config --global core.quotepath false
+
+
+
+对某分支pull默认rebase
+
+```bash
+git config branch.dev.rebase true
+```
+
+对所有分支rebase 
+
+```bash
+ git config --global branch.autosetuprebase always
+```
+
