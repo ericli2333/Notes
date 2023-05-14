@@ -1,0 +1,295 @@
+%%
+%% This is file `njuthesis-postdoctoral.def',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% njuthesis.dtx  (with options: `def-p')
+%% 
+%% Copyright (C) 2021 - 2023
+%% by Nanjing University Linux User Group
+%% <git+nju-lug-email-3104-issue-@yaoge123.cn>
+%% 
+%% This file may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3c of this license
+%% or (at your option) any later version.  The latest version of this
+%% license is in:
+%% 
+%%   http://www.latex-project.org/lppl.txt
+%% 
+%% and version 1.3 or later is part of all distributions of LaTeX version
+%% 2005/12/01 or later.
+%% 
+%% To produce the documentation run the original source files ending with
+%% `.dtx' through XeTeX.
+%% 
+\GetIdInfo $Id: njuthesis.dtx 1.2.1 2023-05-03 13:30:00
+  +0800 NJU LUG <git+nju-lug-email-3104-issue-@yaoge123.cn>$
+  {Postdoctoral definition file for njuthesis}
+\ProvidesExplFile{njuthesis-postdoctoral.def}
+  {\ExplFileDate}{\ExplFileVersion}{\ExplFileDescription}
+  %   \begin{syntax}
+  %     \OPT{degree}  = \Arg{中文学位名}
+  %     \OPT{degree*} = \Arg{英文学位名}
+  %   \end{syntax}
+  % 研究生国家图书馆封面英文封面上的学位名称。默认会由模板通过 \opt{degree}
+  % 和 \opt{type} 文档类选项生成，也可以由本选项自定义名称。
+  % \end{function}
+
+\ctex_at_end_preamble:n
+  {
+    \__nju_date:n { submit }
+  }
+\__nju_declare_element:nn { p / cover / name-img }
+  {
+    content     = \__nju_name:N \c__nju_namewd_dim,
+    bottom-skip = 40 pt
+  }
+\__nju_declare_element:nn { p / cover / report }
+  {
+    content     = \c__nju_name_report_tl,
+    format      = \zihao { 0 } \sffamily,
+    bottom-skip = 40 pt plus 1.5 fil
+  }
+\__nju_declare_element:nn { p / cover / title }
+  {
+    content     =
+      \c__nju_name_title_tl
+      \c__nju_name_colon_tl
+      \g__nju_info_title_tl,
+    format      = \zihao { 4 },
+    bottom-skip = 80 pt
+  }
+\__nju_declare_element:nn { p / cover / info }
+  {
+    content     =
+      \__nju_p_cover_info:NN
+        \c__nju_clabelwd_dim
+        \c__nju_fmt_coverlabel_tl,
+    format      = \zihao { -4 },
+    bottom-skip = 0 pt
+  }
+\cs_new_protected:Npn \__nju_p_cover_info:NN #1#2
+  {
+    \clist_set:Nn \l__nju_tmp_clist
+      { author, supvfull, dept, id, major, submitdate }
+    \__nju_get_max_width:NN \l__nju_tmpb_dim \l__nju_tmp_clist
+    \clist_map_inline:Nn \l__nju_tmp_clist
+      {
+        \__nju_box_spread_name:NNn #1 #2 { ##1 }
+        \c__nju_name_colon_tl
+        \__nju_box_center:Nn \l__nju_tmpb_dim { \__nju_info:n { ##1 } }
+        \tex_par:D
+      }
+  }
+\__nju_declare_element:nn { p / decl / orig / title }
+  {
+    content     = \c__nju_name_origdecl_tl,
+    format      = \c__nju_fmt_chapter_tl,
+    bottom-skip = \c__nju_chapterafter_dim
+  }
+\__nju_declare_element:nn { p / decl / orig / text }
+  {
+    content     = \c__nju_text_origdecl_tl,
+    align       = n,
+    bottom-skip = 2 cm
+  }
+\__nju_declare_element:nn { p / decl / orig / sign }
+  {
+    content     = \__nju_p_decl_sign:nn { origsign } { date },
+    bottom-skip = 0 pt plus 1 fill
+  }
+\__nju_declare_element:nn { p / decl / auth / title }
+  {
+    content     = \c__nju_name_authdecl_tl,
+    format      = \c__nju_fmt_chapter_tl,
+    bottom-skip = \c__nju_chapterafter_dim
+  }
+\__nju_declare_element:nn { p / decl / auth / text }
+  {
+    content     = \c__nju_text_authdecl_tl,
+    align       = n,
+    bottom-skip = 2 cm
+  }
+\__nju_declare_element:nn { p / decl / auth / sign }
+  {
+    content     =
+      \__nju_p_decl_sign:nn { authsign   } { date }
+      \__nju_p_decl_sign:nn { authsigna } { date },
+    bottom-skip = 0 pt plus 1 fill
+  }
+\cs_new_protected:Npn \__nju_p_decl_sign:nn #1#2
+  {
+    \__nju_name:n {#1} \c__nju_name_colon_tl \tex_hfill:D
+    \__nju_name:n {#2} \c__nju_name_colon_tl
+    \skip_horizontal:n { 160 pt } \__nju_null: \__nju_vskip:
+  }
+\__nju_declare_page:nn { cover-p }
+  {
+    element     = { name-img, report, title, info },
+    prefix      = p / cover /,
+    format      = \bfseries,
+    top-skip    = 100 pt
+  }
+\__nju_declare_page:nn { authdecl-p }
+  {
+    element     =
+      {
+        orig/title, orig/text, orig/sign,
+        auth/title, auth/text, auth/sign
+      },
+    prefix      = p / decl /,
+    bm-text     = 声明页,
+    bm-name     = decl,
+    top-skip    = \c__nju_chapterbefore_dim,
+    bottom-skip = 0 pt
+  }
+\cs_new_protected:Npn \__nju_make_cover:
+  {
+    \UseInstance { nju } { cover-p }
+  }
+\cs_new_protected:Npn \__nju_make_decl_i:
+  {
+    \cleardoublepage
+    \UseInstance { nju } { authdecl-p }
+    \cleardoublepage
+  }
+\cs_new_protected:Npn \__nju_make_decl_ii:
+  {
+  }
+\__nju_declare_element:nn { abstract / title }
+  {
+    content     = \g__nju_info_title_tl,
+    format      = \bfseries,
+    bottom-skip = 20 pt
+  }
+\__nju_declare_element:nn { abstract / en / title }
+  {
+    content     = \g__nju_info_title_en_tl,
+    format      = \bfseries,
+    bottom-skip = 20 pt
+  }
+\__nju_declare_element:nn { abstract / mark }
+  {
+    content     = \c__nju_name_abstractb_tl,
+    format      = \sffamily \zihao { -3 },
+    bottom-skip = 15 pt
+  }
+\__nju_declare_element:nn { abstract / en / mark }
+  {
+    content     = \c__nju_name_abstractb_en_tl,
+    format      = \sffamily \zihao { -3 },
+    bottom-skip = 15 pt
+  }
+\cs_new_protected:Npn \__nju_make_abstract:
+  {
+    \UseInstance { nju } { abstract / title }
+    \UseInstance { nju } { abstract / mark  }
+  }
+\cs_new_protected:Npn \__nju_make_abstract_en:
+  {
+    \UseInstance { nju } { abstract / en / title }
+    \UseInstance { nju } { abstract / en / mark  }
+  }
+\clist_map_inline:nn
+  {
+    { acknowledgement   } { 致 \qquad{} 谢                     },
+    { acknowledgement a } { 致谢（盲审阶段，暂时隐去）         },
+    { auth decl         } { 研究报告使用授权书                 },
+    { author            } { 作者                               },
+    { auth sign         } { 本人签名                           },
+    { auth sign       a } { 导师签名                           },
+    { date              } { 日期                               },
+    { dept              } { 系别                               },
+    { id                } { 工号                               },
+    { listoffigures     } { 插图目录                           },
+    { listoftables      } { 表格目录                           },
+    { major             } { 学科专业                           },
+    { notation          } { 符号表                             },
+    { orig decl         } { 研究报告原创性声明                 },
+    { orig sign         } { 研究报告作者签名                   },
+    { paper list        } { 发表文章目录                       },
+    { pdf creator       } { LaTeX~ with~ njuthesis~ class      },
+    { preface           } { 前 \qquad{} 言                     },
+    { report            } { 博士后研究工作报告                 },
+    { submit date       } { 完成日期                           },
+    { supv full         } { 合作导师                           },
+    { supv ii           } { 第二导师                           },
+    { supv title        } { 职称                               },
+    { tableofcontents   } { 目 \qquad{} 录                     },
+    { title             } { 报告题目                           },
+  }
+  { \__nju_define_name:nn #1 }
+\clist_map_inline:nn
+  {
+    { abstract      } { 摘要            } { ABSTRACT              },
+    { abstract    a } { 中文摘要        } { ABSTRACT              },
+    { abstract    b } { 摘\qquad{}要    } { ABSTRACT              },
+    { appendix      } { 附录            } { appendix              },
+    { blankdate     } { \qquad{}年 \quad{}月 \quad{}日   } {      },
+    { blankdate   a } { \njuline{\qquad\qquad} 年
+            \njuline{\qquad} 月 \njuline{\qquad} 日      } {      },
+    { colon         } { ：              } { : \c_space_tl         },
+    { figure        } { 图              } { figure                },
+    { keywords      } { 关键词          } { KEYWORDS              },
+    { lang          } { 中文            } { 英文                  },
+    { nju           } { 南京大学        } { Nanjing~ University   },
+    { suffix        } {                 } { _en                   },
+    { table         } { 表              } { table                 },
+  }
+  { \__nju_define_name:nnn #1 }
+\tl_const:Nn \c__nju_text_origdecl_tl
+  {
+    本人郑重声明：所呈交的研究报告，是本人独立进行研究工作所取得的成果。除
+    文中已经注明引用的内容外，本报告不含任何其他个人或集体已经发表或撰写过
+    的作品成果。对本报告的研究做出重要贡献的个人和集体，均已在报告中以明确
+    方式标明。本人完全意识到本声明的法律结果由本人承担。
+  }
+\tl_const:Nn \c__nju_text_authdecl_tl
+  {
+    本研究报告作者完全了解南京大学有关保留和使用该报告的规定，即：博士后在
+    职期间的知识产权单位属南京大学。学校有权保留并向国家有关部门或机构送交
+    研究报告的复印件和电子版，允许研究报告被查阅和借阅；学校可以公布研究报
+    告的全部或部分内容，可以允许采用影印、缩印或其它复制手段保存、汇编研究
+    报告。保密的研究报告在解密后适用于本授权书。
+  }
+\clist_map_inline:nn
+  {
+    { c label wd     } { 50   pt },
+    { name    wd     } { 220  pt },
+    { rule    ht i   } { .4   pt },
+    { rule    ht ii  } { .8   pt },
+    { rule    dp i   } { -.7  ex },
+    { rule    dp ii  } { -.9  ex },
+    { rule    dp iii } { -1.2 ex },
+    { h sep          } { 5    pt },
+    { v sep          } { 1    ex },
+    { chapter before } { 10   pt },
+    { chapter  after } { 60   pt },
+    { fn hang        } { 13.5 pt }
+  }
+  { \__nju_define_dim:nn #1 }
+\clist_map_inline:nn
+  {
+    { pagestyle     } { headings                          },
+    { abslabel      } { \bfseries                         },
+    { abslabel_en   } {                                   },
+    { cover title   } {                                   },
+    { cover label   } {                                   },
+    { emblem color  } { black                             },
+    { name   color  } { black                             },
+    { section       } { \bigger \normalfont \sffamily     },
+    { chapter       } { \c__nju_fmt_section_tl \centering },
+    { chapterintoc  } { \c__nju_fmt_section_tl            },
+    { subsection    } { \c__nju_fmt_section_tl            },
+    { subsubsection } { \c__nju_fmt_section_tl            },
+    { paragraph     } { \c__nju_fmt_section_tl            },
+    { subparagraph  } { \c__nju_fmt_section_tl            },
+    { toc title     } { \centering \zihao { 3 } \bfseries },
+    { header        } { \small \kaishu                    },
+    { footer        } { \small \rmfamily                  }
+  }
+  { \__nju_define_fmt:nn #1 }
+\endinput
+%%
+%% End of file `njuthesis-postdoctoral.def'.
