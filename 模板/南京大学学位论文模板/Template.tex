@@ -112,7 +112,6 @@
 % 即新建一个 chapters 文件夹
 % 把每一章的内容单独放入一个 .tex 文件
 % 然后在这里用 \include 导入，例如
-%   \include{chapters/introduction}
 %   \include{chapters/environments}
 
 \chapter{引言}
@@ -125,7 +124,8 @@ John Preskill 认为我们现在处于“含噪声的中型量子时代”。\ci
 %---------------------------------------------------------------------
 %	参考文献
 %---------------------------------------------------------------------
-
+\chapter{正文}
+  \include{chapters/section1}
 % 生成参考文献页
 \printbibliography
 

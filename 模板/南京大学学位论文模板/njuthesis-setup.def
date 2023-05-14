@@ -19,10 +19,10 @@
     title* = {My Title in English},
     % 英文题目
     %
-    author = {姓名},
+    author = {李冠霖},
     % 作者姓名
     %
-    author* = {Ming Xing},
+    author* = {Eric Li},
     % 作者英文姓名
     % 一般使用拼音
     %
@@ -34,20 +34,20 @@
     % 英文关键词
     % 使用英文半角逗号(,)分隔
     %
-    grade = {2018},
+    grade = {2023},
     % 年级
     %
-    student-id = {181850195},
+    student-id = {221502012},
     % 学号或工号
     % 研究生请斟酌大小写字母格式
     % 本模板并不会自动更正大小写
     %
-    department = {化学化工学院},
-    department* = {School of Chemistry and Chemical Engineering},
+    department = {计算机科学与技术系},
+    department* = {School of Computer Science},
     % 院系
     %
-    major = {化学},
-    major* = {Chemistry},
+    major = {信息与计算科学},
+    major* = {Information and Computing Science},
     % 专业
     %
     supervisor = {导师姓名,教授},
@@ -60,7 +60,7 @@
     % 第二导师全称
     % 如果确实没有第二导师，不填写即可
     %
-    submit-date = {2022-05-20},
+    submit-date = {2023-5-14},
     % 提交日期
     % 格式为 yyyy-mm-dd
     % 不填就是编译当天日期
