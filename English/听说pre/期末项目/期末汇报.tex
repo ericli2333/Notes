@@ -1,6 +1,9 @@
 \documentclass{beamer}
-\usepackage{ctex, hyperref}%WSL不能用ctex
+% \usepackage{ctex}%WSL不能用ctex
 \usepackage[T1]{fontenc}
+\usepackage[nameinlink]{cleveref}
+\usepackage{hyperref}
+% \usepackage[colorlinks,linkcolor=blue, anchorcolor=blue, citecolor=blue]{hyperref}  
 
 % other packages
 \usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
@@ -79,7 +82,7 @@ Nanjing University
 
 \begin{frame}[allowframebreaks]
     \bibliography{ref}
-    \bibliographystyle{acm}
+    \bibliographystyle{IEEEtran}
     % 如果参考文献太多的话，可以像下面这样调整字体：
     % \tiny\bibliographystyle{alpha}
 \end{frame}
