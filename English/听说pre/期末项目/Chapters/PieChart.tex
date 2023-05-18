@@ -1,0 +1,129 @@
+\begin{frame}
+    \frametitle{Horizontal contrast}
+    \tiny
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[t]{0.4\textwidth}
+            \centering
+            % \raggedleft
+            \begin{tikzpicture}
+                \pie[text=inside,explode={0, 0, 0, 0.1},scale=0.6]{0/Level-1,20/Level-2, 20/Level-3, 0/Level-4, 0/Level-5, 60/Level-6}
+            \end{tikzpicture}
+            \caption{Excellent, I’m the king} \label{fig:pie1}
+        \end{minipage}
+        \begin{minipage}[t]{0.4\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \pie[text=legend,explode=0.1,scale=0.55,sum=auto]{0/Level-1,2/Level-2, 1/Level-3, 1/Level-4, 2/Level-5, 1/Level-6}
+            \end{tikzpicture}
+            \caption{Good enough but not perfect} \label{fig:pie2}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Horizontal contrast}
+    \tiny
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[t]{0.4\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \pie[text=inside,explode={0, 0, 0, 0.1},scale=0.6,sum=auto]{0/Level-1,1/Level-2, 4/Level-3, 3/Level-4, 1/Level-5, 2/Level-6}
+            \end{tikzpicture}
+            \caption{Not that good but acceptable}\label{fig:pie3}
+        \end{minipage}
+        \begin{minipage}[t]{0.4\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \pie[text=legend,explode=0.1,scale=0.55,sum=auto]{1/Level-1,1/Level-2, 1/Level-3, 0/Level-4, 0/Level-5, 0/Level-6}
+            \end{tikzpicture}
+            \caption{There is a long way to go}\label{fig:pie4}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Horizontal contrast}
+    \tiny
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[t]{0.4\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \pie[text=inside,explode={0, 0, 0, 0.1},scale=0.6,sum=auto]{1/Level-1,1/Level-2, 1/Level-3, 0/Level-4, 1/Level-5, 2/Level-6}
+            \end{tikzpicture}
+            \caption{Terrible, I don’t want to mention that}\label{fig:pie5}
+        \end{minipage}
+        \begin{minipage}[t]{0.4\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \pie[text=legend,explode=0.1,scale=0.55,sum=auto]{6/Level-1,0/Level-2, 0/Level-3, 0/Level-4, 0/Level-5, 1/Level-6}
+            \end{tikzpicture}
+            \caption{Sorry, life is hard} \label{fig:pie6}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Longitudinal contrast}
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[t]{0.4\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \pie[text=inside,explode={0, 0, 0, 0.1},scale=0.6,sum=auto,hide number]{0/A, 0/B, 0/C, 1/D, 1/E, 6/F}
+            \end{tikzpicture}
+            \caption{Level-1} \label{fig:pie7}
+        \end{minipage}
+        \begin{minipage}[t]{0.4\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \pie[text=legend,explode=0.1,scale=0.55,sum=auto,hide number]{1/A, 2/B, 1/C, 1/D, 1/E, 0/F}
+            \end{tikzpicture}
+            \caption{Level-2} \label{fig:pie8}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Longitudinal contrast}
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[t]{0.4\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \pie[text=inside,explode={0, 0, 0, 0.1},scale=0.6,sum=auto,hide number]{1/A, 1/B, 4/C, 1/D, 1/E, 0/F}
+            \end{tikzpicture}
+            \caption{Level-3} \label{fig:pie9}
+        \end{minipage}
+        \begin{minipage}[t]{0.4\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \pie[text=legend,explode=0.1,scale=0.55,sum=auto,hide number]{0/A, 1/B, 3/C, 0/D, 0/E, 0/F}
+            \end{tikzpicture}
+            \caption{Level-4} \label{fig:pie10} 
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Longitudinal contrast}
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[t]{0.4\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \pie[text=inside,explode={0, 0, 0, 0.1},scale=0.6,sum=auto,hide number]{0/A, 2/B, 1/C, 0/D, 1/E, 0/F}
+            \end{tikzpicture}
+            \caption{Level-5} \label{fig:pie11}
+        \end{minipage}
+        \begin{minipage}[t]{0.4\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \pie[text=legend,explode=0.1,scale=0.55,sum=auto,hide number]{0/A, 1/B, 0/C, 0/D, 0/E, 0/F}
+            \end{tikzpicture}
+            \caption{Level-6} \label{fig:pie12}
+        \end{minipage}
+    \end{figure}
+\end{frame}
