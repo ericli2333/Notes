@@ -1,3 +1,4 @@
+#! https://zhuanlan.zhihu.com/p/634709353
 # 如何配置git
 本文给出一种更改git配置文件快速配置git的方法，以及一些常用的配置。
 
