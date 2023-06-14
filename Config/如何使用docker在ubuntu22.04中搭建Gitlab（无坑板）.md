@@ -1,3 +1,4 @@
+#! https://zhuanlan.zhihu.com/p/636983434
 # 如何使用docker在ubuntu22.04中搭建Gitlab（无坑版）
 [TOC]
 ## 安装docker
