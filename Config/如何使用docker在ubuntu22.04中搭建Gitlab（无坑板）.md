@@ -99,6 +99,7 @@ vi /etc/gitlab/gitlab.rb
 #### 修改http相关配置
 ```bash
 # 配置http协议所使用的访问地址,不加端口号默认为80,有自己的域名在这里修改
+# 注意：如果你写了自己的域名，一定要写http://不要写https://或者不写
 external_url 'http://127.0.0.1'
 #配置时区
 gitlab_rails['time_zone'] = 'Asia/Shanghai'  
