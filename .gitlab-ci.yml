@@ -1,0 +1,19 @@
+stages:
+  - init
+  - build
+
+# cache:
+#   key: ${CI_BUILD_REF_NAME}
+#   paths:
+#   - node_modules/
+#   - dist/
+
+init:
+  stage: init
+  script:
+  -  echo "Start init"
+
+build:
+  stage: build
+  script:
+  -  g++ Token.cpp -o a.exe
