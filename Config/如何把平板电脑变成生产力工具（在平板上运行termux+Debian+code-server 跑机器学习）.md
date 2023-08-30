@@ -1,3 +1,4 @@
+#! https://zhuanlan.zhihu.com/p/653331276
 # 如何在华为matepad11上安装termux+Debian+code-server 并运行机器学习Python程序
 
 ## 在华为matepad11上安装termux
@@ -110,5 +111,42 @@ curl -fsSL https://code-server.dev/install.sh | sh
 ```bash
 code-server
 ```
-就可以**启动了
+就可以\*\*启动了，但是这个\*\*启动是不完全体，接下来还需要配置外网访问
 
+### 配置外网访问
+输入
+```bash
+vim ~/.config/code-server/config.yaml
+```
+注意，应该先查看一下路径 `~/.config/code-server/` 是否存在，如果不存在，就创建一个，然后输入
+```yaml
+bind-addr: 0.0.0.0:{让哪个端口运行code-server}
+auth: password
+password: {设置登陆密码}
+cert: false
+```
+把对应的中文换成你希望的值
+然后 `source ~/.bashrc` 使配置生效
+再输入`code-server`就可以\*\*启动咯
+
+在外部浏览器输入 `127.0.0.1:{code-server端口号}` 就可以访问了，如果你的页面变成了搜索页面，看看你是不是没有把大括号 **和** 它里面的内容变成对应的端口号，正确的应该是像 `127.0.0.1:8080` 这样的
+
+然后你就会在浏览器上看到让你输入密码，输入密码登录就ok啦
+
+## 在 Debian中安装 Python 以及pytorch相关环境
+这个看起来是最简单的，但是由于 `termux` 的特性，也是最麻烦的
+
+### 安装Python
+在Debian 系统 **里面** 输入
+```bash
+apt install python3 python3-pip
+```
+如果你不幸在登入Debian之前输入这个，那么恭喜你，你将获得两个不同的python，而且外面的termux的python因为系统特性，你连用pip装包都无法成功，而且如果你不知道，还以为在这种情况下输入的 `python` 和 `python3` 是同一个解释器
+
+接下来安装相关依赖
+```bash
+sudo apt install python3-numpy python3-pandas python3-scipy python3-torch python3-matplotlib
+```
+慢慢等就好啦。至于为什么不用pip，因为我这边pip会报错2333
+
+**注意，不要尝试在termux里面开jupyter notebook 以及VSCode下面自己带的jupyter，因为termux的特性，会在启动内核的时候给你报一个permission denied的错误，目前在github上来看是无法解决的**
