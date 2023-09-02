@@ -150,3 +150,19 @@ sudo apt install python3-numpy python3-pandas python3-scipy python3-torch python
 慢慢等就好啦。至于为什么不用pip，因为我这边pip会报错2333
 
 **注意，不要尝试在termux里面开jupyter notebook 以及VSCode下面自己带的jupyter，因为termux的特性，会在启动内核的时候给你报一个permission denied的错误，目前在github上来看是无法解决的**
+
+## 优化code-server的性能
+如果你的code-server卡的一批，可以考虑做一下的优化
+
+### 安装nodejs
+输入
+```bash
+sudo apt install nodejs
+```
+安装
+
+### 关闭电池优化
+在设置里面找到termux和你的浏览器，选择不优化电池，允许后台运行
+
+### 一些比较玄学的方法
+比如在termux里面装上 `x11-repo` 
